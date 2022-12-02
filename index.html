@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+    <title>Document</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="waterContainer">
+        
+        <div class="waterContainer__bgc" id="waterContainer__bgc">
+            <svg class="waterContainer__anim" viewBox="0 0 120 50">
+                <defs>
+                  <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="
+                         1 0 0 0 0  
+                         0 1 0 0 0  
+                         0 0 1 0 0  
+                         0 0 0 13 -9" result="goo" />
+                    <xfeBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                  
+                  <path id="wave" d="M 0,60 C 30,60 30,65 60,65 90,65 90,60 120,60 150,60 150,65 180,65 210,65 210,60 240,60 v 20 h -240 z" />
+                  <clipPath id="flask">
+                  <path d="M 65,25 75,15 85,25 75,35 A 30 30 0 1 1 65,25 z  " />
+                </clipPath>
+                  <path id ="glas" d="M 65,25 75,15 85,25 75,35 A 30 30 0 1 1 65,25 z  " />
+                </defs>
+                
+               <g class="content"> 
+               <g  class="w2"  clip-path="url(#flask)"  filter="url(#goo)"   >
+                  <use  class="wave2  wave" xlink:href="#wave" x="0" y="-1.5" ></use>
+                </g>
+                <g class="w1"  clip-path="url(#flask)"  filter="url(#goo)">
+                  <use class="wave1 wave" xlink:href="#wave" x="0" y="0"/>    
+                  </g>
+                 </g>
+                
+              
+              </svg>
+        </div>
+    </div>
+    <div class="container">
+        <div class="upper">
+            <div class="upperBtn"></div>
+            <div class="timer" id="timer">
+                <svg class="boilAnim" viewBox="0 0 120 100">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="
+                             1 0 0 0 0  
+                             0 1 0 0 0  
+                             0 0 1 0 0  
+                             0 0 0 13 -9" result="goo" />
+                        <xfeBlend in="SourceGraphic" in2="goo" />
+                        </filter>
+                      
+                      <path id="wave" d="M 0,60 C 30,60 30,65 60,65 90,65 90,60 120,60 150,60 150,65 180,65 210,65 210,60 240,60 v 20 h -240 z" />
+                      <clipPath id="flask">
+                      <path d="M 65,25 75,15 85,25 75,35 A 30 30 0 1 1 65,25 z  " />
+                    </clipPath>
+                      <path id ="glas" d="M 65,25 75,15 85,25 75,35 A 30 30 0 1 1 65,25 z  " />
+                    </defs>
+                    
+                   <g class="content"> 
+                   <g  class="w2"  clip-path="url(#flask)"  filter="url(#goo)"   >
+                      <use  class="wave2  wave" xlink:href="#wave" x="0" y="-1.5" ></use>
+                    </g>
+                    <g class="w1"  clip-path="url(#flask)"  filter="url(#goo)">
+                      <use class="wave1 wave" xlink:href="#wave" x="0" y="0"/>    
+                      </g>
+                     </g>
+                    <use  class="glasW" xlink:href="#glas" x="0" y="0" />
+                    <use  class="glas" xlink:href="#glas" x="0" y="0" />
+                  
+                  </svg>
+                  
+                  <div class="boilText" id="boilText">Кип'ятніння - 6 </div>
+                 
+                    
+                
+
+                <div class="row milk">
+                    <div class="imgMilk timerImg"></div>
+                    <div class="row__text">Молоко</div>
+                </div>
+                <div class="row sugar">
+                    <div class="imgSugar timerImg"></div>
+                    <div class="row__text">Цукор</div>
+                </div>
+                <div class="row cream">
+                  <div class="imgCream timerImg"></div>
+                  <div class="row__text">Вершки</div>
+              </div>
+              <div class="row alko">
+                <div class="imgAlko timerImg"></div>
+                <div class="row__text">Віскі</div>
+            </div>
+                <p class="timer__p" id="timer__p">Добрий день 👋</p>
+                <div class="swiper" id="">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper" id="swiperWrapper">
+                      <!-- Slides -->
+                     
+                      
+                    </div>
+                    <!-- If we need pagination -->
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev " id="swiperBtn"></div>
+                    <div class="swiper-button-next " id="swiperBtn2"></div>
+                  
+                    <!-- If we need scrollbar -->
+                    
+                  </div>
+            </div>
+            
+        </div>
+        <div class="filter">
+            <div class="filter-base"></div>
+            <div class="handle"></div>
+            <div class="coffee"></div>
+            <div class="steam"></div>
+            <div class="coffee-drop"></div>
+        </div>
+        <div class="back">
+            <div class="tray"></div>
+            <div class="cup"></div>
+        </div>
+        <div class="lower">
+            <div class="lowerBtnWater lowerBtn" id="lowerBtnWater">+</div>
+            <div class="name">CofBar</div>
+            <div class="lowerBtnMilk lowerBtn" id="lowerBtnMilk" >+</div>
+        </div>
+    </div>
+    <div class="milkContainer">
+        <div class="MilkContainer__bgc" id="MilkContainer__bgc">
+            <svg class="waterContainer__anim waterContainer__anim_milk" viewBox="0 0 120 50">
+                <defs>
+                  <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="
+                         1 0 0 0 0  
+                         0 1 0 0 0  
+                         0 0 1 0 0  
+                         0 0 0 13 -9" result="goo" />
+                    <xfeBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                  
+                  <path id="wave" d="M 0,60 C 30,60 30,65 60,65 90,65 90,60 120,60 150,60 150,65 180,65 210,65 210,60 240,60 v 20 h -240 z" />
+                  <clipPath id="flask">
+                  <path d="M 65,25 75,15 85,25 75,35 A 30 30 0 1 1 65,25 z  " />
+                </clipPath>
+                  <path id ="glas" d="M 65,25 75,15 85,25 75,35 A 30 30 0 1 1 65,25 z  " />
+                </defs>
+                
+               <g class="content"> 
+               <g  class="w2"  clip-path="url(#flask)"  filter="url(#goo)"   >
+                  <use  class="wave2  wave" xlink:href="#wave" x="0" y="-1.5" ></use>
+                </g>
+                <g class="w1"  clip-path="url(#flask)"  filter="url(#goo)">
+                  <use class="wave1 wave" xlink:href="#wave" x="0" y="0"/>    
+                  </g>
+                 </g>
+                
+              
+              </svg>
+        </div>
+    </div>
+   </div>
+</div>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
